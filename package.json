@@ -4,8 +4,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "chore": "^0.1.0",
-    "tsup": "^6.6.2"
+    "chore": "^0.1.0"
   },
   "dependencies": {}
 }

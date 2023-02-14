@@ -5,14 +5,15 @@ import RainSvg from './assets/rain.svg?component';
 
 <template>
   <div class="container">
-    <RainSvg color="#f0f0f0" height="10em" width="10em" />
-    <RainSvg color="blue" height="10em" width="10em" />
-    <VueSvg color="#f0f0f0" height="10em" width="10em" />
+    <RainSvg color="blue" height="5em" width="5em" />
+    <VueSvg width="10em" height="10em" />
+    <RainSvg color="#f0f0f0" height="5em" width="5em" />
   </div>
 </template>
 <style scoped>
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 </style>

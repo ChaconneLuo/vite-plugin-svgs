@@ -13,6 +13,6 @@
     "noEmitOnError": true,
     "noImplicitAny": false
   },
-  "include": ["src/*", "*.d.ts"],
+  "include": ["src/*", "*.d.ts", "src/utils/utils.ts"],
   "exclude": ["node_modules", "example", "dist"]
 }
