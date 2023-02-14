@@ -8,4 +8,5 @@ Elegant use of svg for Vite
 - 🌈 Use props to edit svg color, height and width.
 
 The Vue Edition: /packages/vite-plugin-vue-svgs
+
 The React Edition: /packages/vite-plugin-react-svgs (developing)
