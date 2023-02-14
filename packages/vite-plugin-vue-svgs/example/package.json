@@ -9,13 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vite-plugin-inspect": "^0.7.15",
-    "vue": "^3.2.45"
+    "vue": "^3.2.47"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
-    "typescript": "^4.9.3",
-    "vite": "^4.1.0",
+    "typescript": "^4.9.5",
+    "vite": "link:..\\node_modules\\vite",
+    "vite-plugin-inspect": "^0.7.15",
+    "vite-plugin-vue-svgs": "link:..",
     "vue-tsc": "^1.0.24"
   }
 }
