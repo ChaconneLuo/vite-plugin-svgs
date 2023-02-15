@@ -13,6 +13,7 @@
   "keywords": [
     "svg",
     "vite",
+    "vite-plugin",
     "conponent",
     "plugin",
     "color",
