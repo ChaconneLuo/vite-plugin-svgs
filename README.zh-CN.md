@@ -1,6 +1,6 @@
 # vite-plugin-svgs
 
-[English](Readme.md) | 简体中文
+[English](README.md) | 简体中文
 
 优雅的在 Vite 中使用 SVG
 
