@@ -8,4 +8,5 @@
 - 🌈 使用 Props 优雅的修改 SVG 的颜色与大小。
 
 Vue 版本: /packages/vite-plugin-vue-svgs
+
 React 版本: /packages/vite-plugin-react-svgs (开发中)
