@@ -1,4 +1,4 @@
-# vite-plugin-vue-svgs
+# vite-plugin-svgs
 
 [English](Readme.md) | 简体中文
 
