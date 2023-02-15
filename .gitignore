@@ -4,14 +4,9 @@
 node_modules
 /.pnp
 .pnp.js
-packages/vite-plugin-react-svgs/node_modules
-packages/vite-plugin-vue-svgs/node_modules
-packages/vite-plugin-react-svgs/dist/
-packages/vite-plugin-vue-svgs/dist/
-packages/vite-plugin-react-svgs/example/node_modules
-packages/vite-plugin-vue-svgs/example/node_modules
-packages/vite-plugin-react-svgs/example/dist/
-packages/vite-plugin-vue-svgs/example/dist/
+
+dist/
+*/dist/
 # testing
 /coverage
 
