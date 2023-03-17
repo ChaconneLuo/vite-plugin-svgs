@@ -1,4 +1,3 @@
-import './App.css';
 import ReactSvg from './assets/react.svg?component';
 
 function App() {

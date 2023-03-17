@@ -14,11 +14,11 @@
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react-swc": "^3.1.0",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react-swc": "^3.2.0",
     "typescript": "^4.9.5",
     "vite": "link:..\\node_modules\\vite",
-    "vite-plugin-inspect": "^0.7.15",
+    "vite-plugin-inspect": "^0.7.17",
     "vite-plugin-react-svgs": "link:.."
   }
 }
