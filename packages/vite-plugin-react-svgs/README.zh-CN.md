@@ -84,7 +84,7 @@
       return (
         <div className="container">
           <RainSvg color="blue" height="5em" width="5em" />
-          <ReactSvg width={"10em"} height="10em" />
+          <ReactSvg width="10em" height="10em" />
           <RainSvg color="#f0f0f0" height="5em" width="5em" />
         </div>
       );
