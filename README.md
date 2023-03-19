@@ -9,4 +9,8 @@ Elegant use of svg for Vite
 
 The Vue Edition: /packages/vite-plugin-vue-svgs
 
-The React Edition: /packages/vite-plugin-react-svgs (developing)
+[vite-plugin-vue-svgs](https://www.npmjs.com/package/vite-plugin-vue-svgs)
+
+The React Edition: /packages/vite-plugin-react-svgs
+
+[vite-plugin-react-svgs](https://www.npmjs.com/package/vite-plugin-vue-svgs)

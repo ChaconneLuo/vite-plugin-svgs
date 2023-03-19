@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-vue-svgs",
-  "version": "0.1.5",
+  "version": "0.1.6-vue",
   "description": "A vite plugin, can import svg as vue component and edit svg color by props",
   "main": "dist/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "svg",
     "vite",
     "vite-plugin",
-    "conponent",
+    "component",
     "plugin",
     "color",
     "vue",

@@ -9,4 +9,8 @@
 
 Vue 版本: /packages/vite-plugin-vue-svgs
 
-React 版本: /packages/vite-plugin-react-svgs (开发中)
+[vite-plugin-vue-svgs](https://www.npmjs.com/package/vite-plugin-vue-svgs)
+
+React 版本: /packages/vite-plugin-react-svgs
+
+[vite-plugin-react-svgs](https://www.npmjs.com/package/vite-plugin-vue-svgs)
