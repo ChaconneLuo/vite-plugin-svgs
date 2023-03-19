@@ -4,9 +4,9 @@
   "description": "A vite plugin, can import svg as react component and edit svg color by props",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "pnpm run build --watch --ignore-watch examples",
+    "dev": "pnpm run build --watch --ignore-watch example",
     "build": "tsup src/index.ts --dts --format cjs,esm",
-    "example:vue3": "cd example && pnpm run dev",
+    "example:react": "cd example && pnpm run dev",
     "prepublishOnly": "pnpm run build",
     "release": "npx bumpp --push --tag --commit && pnpm publish"
   },
@@ -24,13 +24,16 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.15.3",
+    "@types/react": "^18.0.28",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
     "eslint": "^8.36.0",
     "typescript": "^4.9.5",
-    "vite": "^4.2.0"
+    "vite": "^4.2.0",
+    "bumpp": "^8.2.1",
+    "tsup": "^6.6.3"
   },
-  "dependencies": {
-    "@babel/core": "^7.21.3"
+  "peerDependencies": {
+    "vite": ">2.0.0-0"
   }
 }

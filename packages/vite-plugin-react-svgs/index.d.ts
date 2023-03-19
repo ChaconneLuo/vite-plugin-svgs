@@ -1,6 +1,6 @@
 declare module '*.svg?component' {
-  import { FunctionalComponent, SVGAttributes } from 'vue';
-  const src: FunctionalComponent<SVGAttributes>;
+  import { FunctionComponent } from 'react';
+  const src: FunctionComponent<{ width?: string, height?: string, color?: string }>;
   export default src;
 }
 
@@ -14,7 +14,7 @@ declare module '*.svg?raw' {
   export default src;
 }
 
-declare module 'vite-plugin-vue-svgs' {
+declare module 'vite-plugin-react-svgs' {
   import { Plugin } from 'vite';
   function createSvgIconsPlugin(options?: {
     defaultImport?: 'raw' | 'component' | 'url';

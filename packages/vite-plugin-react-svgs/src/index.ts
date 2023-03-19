@@ -1,7 +1,6 @@
 import { PluginOptions } from './types';
-import { Plugin } from 'vite';
+import { Plugin, transformWithEsbuild } from 'vite';
 import { promises as fs } from 'fs';
-import { parse, transform } from '@babel/core';
 import { getCssUrl } from './utils';
 
 export function createSvgIconsPlugin(options: PluginOptions): Plugin {
@@ -38,7 +37,7 @@ export function createSvgIconsPlugin(options: PluginOptions): Plugin {
       if (mode === 'mask') {
         code = `import React from 'react';
 
-        export default function Svg({ color, height, width }) {
+        const Svg = ({ color, height, width }) => {
             const uri = \`${getCssUrl(`${svg}`)}\`;
             return (
                 <div>
@@ -54,11 +53,12 @@ export function createSvgIconsPlugin(options: PluginOptions): Plugin {
                 </div>
             )
         }
+        export default Svg;
         `;
       } else {
         code = `import React from 'react';
 
-        export default function Svg({ height, width }) {
+        const Svg = ({ height, width }) => {
             const uri = \`${getCssUrl(`${svg}`)}\`;
             return (
                 <div style={{
@@ -71,17 +71,22 @@ export function createSvgIconsPlugin(options: PluginOptions): Plugin {
                 }} />
             )
         }
+        export default Svg;
         `;
       }
-      const ast = parse(code, {
-        sourceType: 'module',
-        plugins: ['jsx'],
+      return code;
+    },
+    async transform(code, id) {
+      if (!id.match(svgRegex)) {
+        return;
+      }
+      const res = await transformWithEsbuild(code, id, {
+        loader: 'tsx',
       });
-      const { code: transformedCode } = transform(ast, {
-        plugins: ['@babel/plugin-transform-react-jsx'],
-      });
-      console.log(transformedCode);
-      return transformedCode;
+      return {
+        code: res.code,
+        id: id,
+      };
     }
   };
 }
