@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-vue-svgs",
-  "version": "0.1.9-vue",
+  "version": "0.1.10-vue",
   "description": "A vite plugin, can import svg as vue component and edit svg color by props",
   "main": "dist/index.js",
   "scripts": {
@@ -31,11 +31,11 @@
     "@vue/compiler-sfc": "^3.2.47"
   },
   "devDependencies": {
-    "@types/node": "^18.15.5",
-    "@typescript-eslint/eslint-plugin": "^5.56.0",
-    "@typescript-eslint/parser": "^5.56.0",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
     "bumpp": "^8.2.1",
-    "eslint": "^8.36.0",
+    "eslint": "^8.37.0",
     "tsup": "^6.7.0",
     "typescript": "^4.9.5",
     "vite": "^4.2.1"
