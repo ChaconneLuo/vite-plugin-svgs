@@ -115,14 +115,7 @@ export function createSvgIconsPlugin(options: PluginOptions): Plugin {
         source: parseValue.descriptor.template!.content,
         filename: path,
         transformAssetUrls: false,
-        ssr: false,
-        compilerOptions: {
-          mode: 'function',
-          prefixIdentifiers: true,
-          optimizeImports: true,
-        },
       });
-      console.log(code)
       let { content } = compileScript(parseValue.descriptor, {
         id: JSON.stringify(id),
       });
