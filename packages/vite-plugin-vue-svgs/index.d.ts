@@ -1,6 +1,6 @@
 declare module '*.svg?component' {
-  import { FC, SVGAttributes } from 'react';
-  const src: FC<SVGAttributes>;
+  import { FunctionalComponent, SVGAttributes } from 'vue';
+  const src: FunctionalComponent<SVGAttributes>;
   export default src;
 }
 
