@@ -1,6 +1,6 @@
 declare module '*.svg?component' {
   import { FunctionComponent } from 'react';
-  const src: FunctionComponent<{ width?: string, height?: string, color?: string }>;
+  const src: FunctionComponent<{ width?: string, height?: string, color?: string } & React.HTMLAttributes<HTMLDivElement>>;
   export default src;
 }
 

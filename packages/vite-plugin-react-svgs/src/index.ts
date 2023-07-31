@@ -37,7 +37,13 @@ export function createSvgIconsPlugin(options: PluginOptions): Plugin {
       if (mode === 'mask') {
         code = `import React from 'react';
 
-        const Svg = ({ color, height, width }) => {
+        export type SvgProps = {
+          color: string;
+          height: string;
+          width: string;
+        } & React.HTMLAttributes<HTMLDivElement>;
+
+        const Svg = ({ color, height, width, ...rest }: SvgProps) => {
             const uri = \`${getCssUrl(`${svg}`)}\`;
             return (
                 <div>
@@ -49,7 +55,7 @@ export function createSvgIconsPlugin(options: PluginOptions): Plugin {
                         backgroundColor: color || 'gray',
                         height: height || '1em',
                         width: width || '1em',
-                    }} />
+                    }} {...rest}/>
                 </div>
             )
         }
@@ -58,7 +64,12 @@ export function createSvgIconsPlugin(options: PluginOptions): Plugin {
       } else {
         code = `import React from 'react';
 
-        const Svg = ({ height, width }) => {
+        export type SvgProps = {
+          height: string;
+          width: string;
+        } & React.HTMLAttributes<HTMLDivElement>;
+
+        const Svg = ({ height, width, ...rest }: SvgProps) => {
             const uri = \`${getCssUrl(`${svg}`)}\`;
             return (
                 <div style={{
@@ -68,7 +79,7 @@ export function createSvgIconsPlugin(options: PluginOptions): Plugin {
                     backgroundColor: 'transparent',
                     height: height || '1em',
                     width: width || '1em',
-                }} />
+                }} {...rest}/>
             )
         }
         export default Svg;
