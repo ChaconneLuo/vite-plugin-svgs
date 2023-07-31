@@ -47,7 +47,11 @@ Installation can be done in a few simple steps. From the root of your repo do th
 3. **Typescript Config** (optional)
 
    If you're using Typescript than you'll want take the additional step of adding a types file to help Typescript to understand how to think of SVG.
-
+   
+    ```ts
+    /// <reference types="vite-plugin-react-svgs/index" />
+    ```
+    Or
    ```ts
     declare module '*.svg?component' {
       import { FunctionComponent } from 'react';

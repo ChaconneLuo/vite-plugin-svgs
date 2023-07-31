@@ -4,7 +4,7 @@
 
 优雅的在 React 中使用 SVG
 
-- 🌟 导入 Svg 图标为 Vue 组件
+- 🌟 导入 Svg 图标为 React 组件
 - 🌈 使用 Props 优雅的修改 SVG 的颜色与大小。
 
 ## 安装插件
@@ -45,6 +45,11 @@
 3. **TS 类型文件** (optional)
 
    如果你正在使用 Typescript，你需要额外的类型文件去使 Typescript 可以准确地理解导入的 SVG 文件。
+
+    ```ts
+    /// <reference types="vite-plugin-react-svgs/index" />
+    ```
+    或者
 
     ```ts
     declare module '*.svg?component' {
