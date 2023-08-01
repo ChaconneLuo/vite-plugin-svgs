@@ -75,14 +75,15 @@ export function createSvgIconsPlugin(options: PluginOptions): Plugin {
             const getColor = (uri: string) => {
               if(color !== ''){
                 return uri
-                .replace('{}',\`width = \${width} height = \${height}\`)
-                .replace(/stroke='.*?'/g, \`stroke = \${color}\`);
+                .replace('{}',\`width='\${width}' height ='\${height}'\`)
+                .replace(/stroke='.*?'/g, \`stroke='\${color}'\`)
+                .replace(/fill='(?:(?!none)(?:#(?:[0-9a-fA-F]{3}){1,2}|(?:red|blue|green|yellow|orange|purple)))'/g, \`fill='\${color}'\`)
               }
               return uri.replace('{}',\`width = \${width} height = \${height}\`);
             }
             return (
-              <div style={{width: width, height: height}} dangerouslySetInnerHTML={{__html: getColor(uri)}} {...rest}>
-              </div>
+                <div style={{width: width, height: height}} dangerouslySetInnerHTML={{__html: getColor(uri)}} {...rest}>
+                </div>
             )
         }
         export default Svg;
