@@ -6,11 +6,17 @@ export function encodeSvg(svg: string) {
     )
     .replace(/"/g, '\'')
     .replace(/%/g, '%25')
-    .replace(/#/g, '%23')
+    // .replace(/#/g, '%23')
     .replace(/{/g, '%7B')
     .replace(/}/g, '%7D')
-    .replace(/</g, '%3C')
-    .replace(/>/g, '%3E');
+    // .replace(/</g, '%3C')
+    // .replace(/>/g, '%3E');
+}
+
+export function getDataSvg(svg: string){
+  const svgData = encodeSvg(svg).replace(/width='.*?'/, '').replace(/height='.*?'/, '{}');
+  return svgData;
+  // return `data:image/svg+xml;utf8,${svgData}`;
 }
 
 export function getCssUrl(svg: string) {

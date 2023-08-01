@@ -1,7 +1,7 @@
 import { PluginOptions } from './types';
 import { Plugin, transformWithEsbuild } from 'vite';
 import { promises as fs } from 'fs';
-import { getCssUrl } from './utils';
+import { getCssUrl, getDataSvg } from './utils';
 
 export function createSvgIconsPlugin(options: PluginOptions): Plugin {
   const { defaultImport } = options;
@@ -38,7 +38,7 @@ export function createSvgIconsPlugin(options: PluginOptions): Plugin {
         code = `import React from 'react';
 
         export type SvgProps = {
-          color: string;
+          color?: string;
           height: string;
           width: string;
         } & React.HTMLAttributes<HTMLDivElement>;
@@ -67,19 +67,22 @@ export function createSvgIconsPlugin(options: PluginOptions): Plugin {
         export type SvgProps = {
           height: string;
           width: string;
+          color?: string; 
         } & React.HTMLAttributes<HTMLDivElement>;
 
-        const Svg = ({ height, width, ...rest }: SvgProps) => {
-            const uri = \`${getCssUrl(`${svg}`)}\`;
+        const Svg = ({ height = '1em', width = '1em', color = '', ...rest }: SvgProps) => {
+            const uri = \`${getDataSvg(`${svg}`)}\`;
+            const getColor = (uri: string) => {
+              if(color !== ''){
+                return uri
+                .replace('{}',\`width = \${width} height = \${height}\`)
+                .replace(/stroke='.*?'/g, \`stroke = \${color}\`);
+              }
+              return uri.replace('{}',\`width = \${width} height = \${height}\`);
+            }
             return (
-                <div style={{
-                    background: uri,
-                    backgroundRepeat: 'no-repeat',
-                    backgroundSize: '100% 100%',
-                    backgroundColor: 'transparent',
-                    height: height || '1em',
-                    width: width || '1em',
-                }} {...rest}/>
+              <div dangerouslySetInnerHTML={{__html: getColor(uri)}} {...rest}>
+              </div>
             )
         }
         export default Svg;
