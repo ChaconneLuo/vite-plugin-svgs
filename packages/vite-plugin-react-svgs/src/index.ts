@@ -81,7 +81,7 @@ export function createSvgIconsPlugin(options: PluginOptions): Plugin {
               return uri.replace('{}',\`width = \${width} height = \${height}\`);
             }
             return (
-              <div dangerouslySetInnerHTML={{__html: getColor(uri)}} {...rest}>
+              <div style={{width: width, height: height}} dangerouslySetInnerHTML={{__html: getColor(uri)}} {...rest}>
               </div>
             )
         }

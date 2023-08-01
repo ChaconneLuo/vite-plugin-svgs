@@ -11,7 +11,7 @@ function App() {
       <RainSvg color="blue" height="5em" width="5em" onClick={()=>console.log(1)}/>
       <ReactSvg width="10em" height="10em" />
       <FaceSvg color='blue' height="5em" width="5em" />
-      <MicrophoneSvg height="5em" width="5em" />
+      <MicrophoneSvg height="50px" width="50px" />
     </div>
   );
 }
