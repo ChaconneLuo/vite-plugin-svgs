@@ -14,7 +14,7 @@ Installation can be done in a few simple steps. From the root of your repo do th
 1. **Install**
 
    ```bash
-   npm i vite-plugin-react-svgs -D
+   npm i vite-plugin-react-svgs --save-dev
    ```
 
    ```bash

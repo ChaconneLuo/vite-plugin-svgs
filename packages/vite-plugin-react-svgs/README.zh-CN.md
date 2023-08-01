@@ -12,7 +12,7 @@
 1. **安装**
 
    ```bash
-   npm i vite-plugin-react-svgs -D
+   npm i vite-plugin-react-svgs --save-dev
    ```
 
    ```bash

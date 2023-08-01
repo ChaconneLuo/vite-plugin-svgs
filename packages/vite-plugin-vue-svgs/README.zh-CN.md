@@ -12,7 +12,7 @@
 1. **安装**
 
    ```bash
-   npm i vite-plugin-vue-svgs -D
+   npm i vite-plugin-vue-svgs --save-dev
    ```
 
    ```bash

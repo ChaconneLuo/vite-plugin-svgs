@@ -14,7 +14,7 @@ Installation can be done in a few simple steps. From the root of your repo do th
 1. **Install**
 
    ```bash
-   npm i vite-plugin-vue-svgs -D
+   npm i vite-plugin-vue-svgs --save-dev
    ```
 
    ```bash
