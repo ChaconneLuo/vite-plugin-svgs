@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-react-svgs",
-  "version": "0.1.8-react",
+  "version": "0.1.9-react",
   "description": "A vite plugin, can import svg as react component and edit svg color by props",
   "main": "dist/index.js",
   "scripts": {
