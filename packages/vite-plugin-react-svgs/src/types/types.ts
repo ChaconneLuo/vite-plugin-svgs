@@ -1,3 +1,3 @@
 export type PluginOptions = {
-  defaultImport: string;
+  defaultImport?: 'raw' | 'component' | 'url';
 };

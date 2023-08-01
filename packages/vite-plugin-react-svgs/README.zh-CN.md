@@ -30,7 +30,6 @@
    ```ts
    import { createSvgIconsPlugin } from 'vite-plugin-react-svgs';
    import { defineConfig } from 'vite';
-   import vue from '@vitejs/plugin-react';
 
    export default defineConfig({
      plugins: [

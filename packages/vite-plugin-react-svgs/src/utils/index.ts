@@ -4,7 +4,7 @@ export function encodeSvg(svg: string) {
       '<svg',
       ~svg.indexOf('xmlns') ? '<svg' : '<svg xmlns="http://www.w3.org/2000/svg"'
     )
-    .replace(/"/g, "'")
+    .replace(/"/g, '\'')
     .replace(/%/g, '%25')
     .replace(/#/g, '%23')
     .replace(/{/g, '%7B')
